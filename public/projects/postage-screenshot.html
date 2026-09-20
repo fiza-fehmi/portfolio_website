@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postage - Real Estate Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 1200px;
+            height: 750px;
+            background: white;
+            position: relative;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -1px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 40px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, #f8f9ff 0%, white 100%);
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .search-bar {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        /* Property Cards */
+        .properties {
+            padding: 40px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .property-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+        }
+        
+        .property-image {
+            height: 180px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+        
+        .property-image-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .property-image-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .property-image-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        
+        .property-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.95);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .property-info {
+            padding: 20px;
+        }
+        
+        .property-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .property-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        
+        .property-location {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+        
+        .property-features {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Floating Elements */
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+            font-weight: 700;
+            color: #667eea;
+            font-size: 14px;
+        }
+        
+        .badge-1 {
+            top: 480px;
+            right: 40px;
+        }
+        
+        .badge-2 {
+            bottom: 40px;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🏠 Postage</div>
+            <div class="nav">
+                <span>Home</span>
+                <span>Properties</span>
+                <span>Agents</span>
+                <span>About</span>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Find Your Dream Home</h1>
+            <p>Discover the perfect property with our advanced search platform</p>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search by location, property type, or price...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <!-- Property Cards -->
+        <div class="properties">
+            <div class="property-card">
+                <div class="property-image property-image-1">
+                    🏡
+                    <div class="property-badge">FOR SALE</div>
+                </div>
+                <div class="property-info">
+                    <div class="property-price">$450,000</div>
+                    <div class="property-title">Modern Villa</div>
+                    <div class="property-location">📍 Beverly Hills, CA</div>
+                    <div class="property-features">
+                        <div class="feature">🛏️ 4 Beds</div>
+                        <div class="feature">🚿 3 Baths</div>
+                        <div class="feature">📐 2,400 sqft</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <div class="property-image property-image-2">
+                    🏢
+                    <div class="property-badge">FOR RENT</div>
+                </div>
+                <div class="property-info">
+                    <div class="property-price">$2,800/mo</div>
+                    <div class="property-title">Luxury Apartment</div>
+                    <div class="property-location">📍 Manhattan, NY</div>
+                    <div class="property-features">
+                        <div class="feature">🛏️ 2 Beds</div>
+                        <div class="feature">🚿 2 Baths</div>
+                        <div class="feature">📐 1,200 sqft</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <div class="property-image property-image-3">
+                    🌆
+                    <div class="property-badge">NEW</div>
+                </div>
+                <div class="property-info">
+                    <div class="property-price">$680,000</div>
+                    <div class="property-title">Penthouse Suite</div>
+                    <div class="property-location">📍 Miami Beach, FL</div>
+                    <div class="property-features">
+                        <div class="feature">🛏️ 3 Beds</div>
+                        <div class="feature">🚿 3 Baths</div>
+                        <div class="feature">📐 1,800 sqft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Badges -->
+        <div class="floating-badge badge-1">🔥 500+ Properties</div>
+        <div class="floating-badge badge-2">⚡ Real-time Updates</div>
+    </div>
+</body>
+</html>
