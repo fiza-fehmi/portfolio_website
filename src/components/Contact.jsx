@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { Mail, Briefcase, Send, MapPin, Phone } from 'lucide-react';
+import { Mail, Briefcase, Send, MapPin } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 
 const Contact = () => {
@@ -51,15 +51,9 @@ const Contact = () => {
       href: 'mailto:fizzafehmii@gmail.com',
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
-    },
-    {
       icon: MapPin,
       label: 'Location',
-      value: 'Available Remotely',
+      value: 'Bahawalpur',
       href: null,
     },
   ];
