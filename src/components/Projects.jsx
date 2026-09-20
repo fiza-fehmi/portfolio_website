@@ -48,7 +48,7 @@ const Projects = () => {
       image: '/projects/portfolio.png',
       tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
       liveLink: 'http://localhost:5173',
-      githubLink: '#',
+      githubLink: 'https://github.com/fiza-fehmi/portfolio_website',
       gradient: 'from-violet-600 to-purple-600',
     },
     {
