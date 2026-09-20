@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 
 const Footer = () => {
@@ -105,12 +105,9 @@ const Footer = () => {
             <p className="text-gray-500 text-sm text-center md:text-left">
               © {currentYear} Fiza Fehmi. All rights reserved.
             </p>
-            <motion.p
-              className="text-gray-500 text-sm flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              Built with <Heart size={16} className="text-red-500 animate-pulse" /> using React & Tailwind CSS
-            </motion.p>
+            <p className="text-gray-500 text-sm">
+              Built with React & Tailwind CSS
+            </p>
           </div>
         </div>
       </div>
