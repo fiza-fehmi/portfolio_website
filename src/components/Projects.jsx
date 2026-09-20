@@ -60,6 +60,24 @@ const Projects = () => {
       githubLink: 'https://github.com/fiza-fehmi/Property_Hub',
       gradient: 'from-amber-500 to-orange-500',
     },
+    {
+      title: 'Temperature Converter',
+      description: 'An elegant temperature conversion tool that converts between Celsius, Fahrenheit, and Kelvin. Features real-time conversion, clean UI design, and responsive layout for seamless temperature calculations.',
+      image: '/projects/temperature-converter.png',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      liveLink: 'https://temprature-converter-orcin.vercel.app',
+      githubLink: 'https://github.com/fiza-fehmi/Temprature-Converter',
+      gradient: 'from-red-500 to-orange-500',
+    },
+    {
+      title: 'Stack Calculator',
+      description: 'A functional calculator application with a clean, modern interface. Built using stack-based operations for arithmetic calculations including addition, subtraction, multiplication, and division.',
+      image: '/projects/stack-calculator.png',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      liveLink: 'https://stack-calculator-three.vercel.app',
+      githubLink: 'https://github.com/fiza-fehmi/stack-calculator',
+      gradient: 'from-green-500 to-emerald-600',
+    },
   ];
 
   const containerVariants = {
