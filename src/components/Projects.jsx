@@ -47,7 +47,7 @@ const Projects = () => {
       description: 'A premium, fully responsive personal portfolio showcasing projects and skills with smooth animations, custom cursor, glassmorphism effects, and modern design aesthetics. Built with React, Vite, Tailwind CSS v4, and Framer Motion.',
       image: '/projects/portfolio.png',
       tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-      liveLink: 'http://localhost:5173',
+      liveLink: 'https://portfolio-website-ochre-omega-73.vercel.app',
       githubLink: 'https://github.com/fiza-fehmi/portfolio_website',
       gradient: 'from-violet-600 to-purple-600',
     },
