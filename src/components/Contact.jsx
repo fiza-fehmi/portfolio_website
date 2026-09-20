@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Bahawalpur',
+      value: 'Bahawalpur, Pakistan',
       href: null,
     },
   ];
