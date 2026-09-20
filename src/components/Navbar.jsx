@@ -94,7 +94,7 @@ const Navbar = () => {
                   {activeSection === item.href.substring(1) && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
+                      className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-violet-600 to-purple-600"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
