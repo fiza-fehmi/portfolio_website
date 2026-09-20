@@ -43,6 +43,15 @@ const Projects = () => {
       gradient: 'from-violet-500 to-purple-500',
     },
     {
+      title: 'To-Do List',
+      description: 'An elegant task management application with intuitive interface. Features include add, edit, and delete tasks, filter by status (all, pending, completed), task counters, and beautiful purple gradient design with dark theme.',
+      image: '/projects/todo-list.png',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      liveLink: 'https://to-do-list-seven-nu-51.vercel.app',
+      githubLink: 'https://github.com/fiza-fehmi/to-do-list',
+      gradient: 'from-purple-600 to-violet-600',
+    },
+    {
       title: 'Portfolio Website',
       description: 'A premium, fully responsive personal portfolio showcasing projects and skills with smooth animations, custom cursor, glassmorphism effects, and modern design aesthetics. Built with React, Vite, Tailwind CSS v4, and Framer Motion.',
       image: '/projects/portfolio.png',
